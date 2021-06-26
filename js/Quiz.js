@@ -37,6 +37,7 @@ class Quiz {
     text("----------------------------",320,65)
     Contestant.getPlayerInfo()
     if(allContestants !== undefined){
+      var display_position = 250;
       fill("blue")
       textSize(20)
       text("NOTE: Contestants who answered correct are highlighted in green colour!",130,230)
@@ -49,7 +50,14 @@ class Quiz {
         else
         fill ("red")
 
+        display_position+=20;
+        textSize(15);
+        text(allContestants[plr].name + ": " + allContestants[plr].answer, 150,display_position)
+
+
     
+    
+           
           }
 
      }
